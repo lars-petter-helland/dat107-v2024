@@ -11,7 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
+# *.jar - slik at de 3 jar-filene lagres sammen med hvert prosjekt
 *.war
 *.nar
 *.ear
