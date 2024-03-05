@@ -7,17 +7,25 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
 public class Main1_FindById {
+	
+	private static EntityManagerFactory emf;
+	
+	private static void settOppOppkobling() {
+		emf = Persistence.createEntityManagerFactory("personPersistenceUnit", 
+				Map.of("jakarta.persistence.jdbc.password", Passwords.LOCALHOST_PASSWORD));
+	}
+	
+	/* ------------------------------------------------------------------- */
 
     public static void main(String[] args) {
+    	
+    	settOppOppkobling();
+    	
         Person p = finnPersonMedId(1001);
         System.out.println(p);
     }
 
     private static Person finnPersonMedId(int id) {
-
-		EntityManagerFactory emf = Persistence
-				.createEntityManagerFactory("personPersistenceUnit", 
-				Map.of("jakarta.persistence.jdbc.password", Passwords.LOCALHOST_PASSWORD));
 
 		System.out.println("Kobler til database...");
         EntityManager em = emf.createEntityManager();

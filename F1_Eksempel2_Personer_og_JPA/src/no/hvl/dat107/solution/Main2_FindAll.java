@@ -9,18 +9,26 @@ import jakarta.persistence.Persistence;
 import jakarta.persistence.TypedQuery;
 
 public class Main2_FindAll {
+	
+	private static EntityManagerFactory emf;
+	
+	private static void settOppOppkobling() {
+		emf = Persistence.createEntityManagerFactory("personPersistenceUnit", 
+				Map.of("jakarta.persistence.jdbc.password", Passwords.LOCALHOST_PASSWORD));
+	}
+	
+	/* ------------------------------------------------------------------- */
 
 	public static void main(String[] args) {
+
+		settOppOppkobling();
 
 		String jpql = "SELECT p FROM Person p"; //NB! Dette er ikke SQL, men JPQL
 		List<Person> personer = null;
 		
-		EntityManagerFactory emf = Persistence
-				.createEntityManagerFactory("personPersistenceUnit", 
-				Map.of("jakarta.persistence.jdbc.password", Passwords.LOCALHOST_PASSWORD));
-
 		System.out.println("Kobler til database...");
 		EntityManager em = emf.createEntityManager();
+		
 		try {
 	        TypedQuery<Person> query = em.createQuery(jpql, Person.class);
 	        personer = query.getResultList();
