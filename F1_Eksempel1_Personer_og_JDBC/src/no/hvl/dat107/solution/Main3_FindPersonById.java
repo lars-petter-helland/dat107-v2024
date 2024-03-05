@@ -17,6 +17,10 @@ public class Main3_FindPersonById {
 //	static final String DB_URL = "jdbc:postgresql://ider-database.westeurope.cloudapp.azure.com:5432/lph";
 //	static final String USER = "lph";
 //	static final String PASS = Passwords.AZURE_PASSWORD;
+	
+//	static final String DB_URL = "jdbc:postgresql://129.151.221.119:5432/lph";
+//	static final String USER = "lph";
+//	static final String PASS = Passwords.DAT107_HVL_PASSWORD;
 
 	public static void main(String[] args) throws ClassNotFoundException {
 

@@ -18,6 +18,10 @@ public class Main1_PlainOldJDBC {
 //	static final String USER = "lph";
 //	static final String PASS = Passwords.AZURE_PASSWORD;
 
+//	static final String DB_URL = "jdbc:postgresql://129.151.221.119:5432/lph";
+//	static final String USER = "lph";
+//	static final String PASS = Passwords.DAT107_HVL_PASSWORD;
+
 	public static void main(String[] args) {
 
 		String sql = "SELECT id, navn FROM forelesning1.person";
