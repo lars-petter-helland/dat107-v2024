@@ -11,12 +11,9 @@
 		<properties>
 		    <!--  Generelle JPA properties -->
 			<property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-			<property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/dat107v24"/>
-			<property name="jakarta.persistence.jdbc.user" value="postgres"/>
-			<!-- evt- 129.151.221.119:5432/lph og lph-->
-			
-			<!-- Denne henter jeg i koden i stedet :)
-		    <property name="jakarta.persistence.jdbc.password" value="??????"/>  -->
+			<property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://129.151.221.119:5432/lph"/>
+			<property name="jakarta.persistence.jdbc.user" value="lph"/>
+		    <property name="jakarta.persistence.jdbc.password" value="Ha1FinDagIDag!"/>
 			
 			<!--  EclipseLink properties -->
             <!--  Se https://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging -->
