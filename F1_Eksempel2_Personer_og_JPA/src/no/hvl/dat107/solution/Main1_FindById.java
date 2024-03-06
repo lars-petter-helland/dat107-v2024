@@ -9,8 +9,7 @@ import jakarta.persistence.Persistence;
 public class Main1_FindById {
 	
 	private static EntityManagerFactory emf;
-	
-	private static void settOppOppkobling() {
+	static {
 		emf = Persistence.createEntityManagerFactory("personPersistenceUnit", 
 				Map.of("jakarta.persistence.jdbc.password", Passwords.LOCALHOST_PASSWORD));
 	}
@@ -18,8 +17,6 @@ public class Main1_FindById {
 	/* ------------------------------------------------------------------- */
 
     public static void main(String[] args) {
-    	
-    	settOppOppkobling();
     	
         Person p = finnPersonMedId(1001);
         System.out.println(p);
